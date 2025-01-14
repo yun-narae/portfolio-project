@@ -19,7 +19,7 @@
     background-color: var(--subBg100);
     backdrop-filter: blur(15px);
 
-    .header_inner {
+    .header__inner {
         padding: rem(20px) rem(16px);
         align-items: center;
         justify-content: center;
@@ -31,7 +31,7 @@
             padding: rem(12px) rem(18px);
         }
 
-        .header_logo {
+        .header__logo {
             font-size: rem(18px);
             font-weight: 800;
             @include flex-between;
@@ -47,7 +47,7 @@
             }
         }
 
-        .header_nav {
+        .header__nav {
             text-align: center;
             display: flex;
             flex-direction: row;

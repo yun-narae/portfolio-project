@@ -47,9 +47,9 @@ const Header = () => {
 
   return (
     <header id="header" role="banner">
-      <div className="header_inner">
+      <div className="header__inner">
         {/* 로고 */}
-        <h1 className="header_logo">
+        <h1 className="header__logo">
           <a href="/" tabIndex="0">
             portfolio<em>React</em>
           </a>
@@ -57,7 +57,7 @@ const Header = () => {
 
         {/* 네비게이션 */}
         <nav
-          className={`header_nav ${isActive ? "active" : ""}`}
+          className={`header__nav ${isActive ? "active" : ""}`}
           role="navigation"
           aria-label="메인 메뉴"
         >
