@@ -34,7 +34,7 @@ const Header = () => {
         <header id="header" role="banner">
             <div className="header_inner">
                 <h1 className="header_logo">
-                    <a href="/">portfolio<em>vite</em></a>
+                    <a href="/">portfolio<em>React</em></a>
                 </h1>
                 <nav 
                     className={`header_nav ${isActive ? "active" : ""}`} 
