@@ -16,8 +16,12 @@
     top: 0;
     right: 0;
     left: 0;
-    background-color: var(--subBg100);
-    backdrop-filter: blur(15px);
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);;
+
+    @include laptop {
+        background-color: transparent;
+    }
 
     .header__inner {
         padding: rem(20px) rem(16px);
@@ -37,11 +41,12 @@
             @include flex-between;
 
             em {
+                color: #df2929;
                 font-weight: 400;
                 font-size: rem(12px);
                 padding: rem(4px) rem(6px);
                 border-radius: rem(4px);
-                background-color: var(--subBg200);
+                background-color: rgba(0, 0, 0, 0.2);;
                 margin-left: rem(8px);
                 margin-bottom: rem(4px);
             }
@@ -57,6 +62,7 @@
             row-gap: rem(40px);
             margin-top: rem(20px);
             padding: 20px;
+            background-color: transparent;
 
             // active style
             transition: transform 0.3s ease-in-out;
@@ -69,7 +75,7 @@
             // nav js
             &.active {
                 transform: translateY(100%);
-                background-color: var(--subBg100);
+                background-color: rgba(0, 0, 0, 0.2);;
             }
 
             @include laptop {
@@ -104,18 +110,15 @@
                         display: block;
                         padding: rem(12px);
                         border-radius: rem(6px);
-                        font-size: rem(14px);
+                        font-size: rem(16px);
+                        font-weight: 600;
                         &:hover {
-                            background-color: var(--subBg200);
+                            background-color: rgba(0, 0, 0, 0.2);;
                         }
-                        
                     }
                 }
-                
             }
-            
         }
-        
     }
     
     .btn-box {
@@ -127,9 +130,11 @@
         width: rem(40px);
         height: rem(40px);
         border-radius: 100%;
+        font-weight: 600;
         @extend %button-reset, %center;
+
         &:hover {
-            background-color: var(--subBg200);
+            background-color: rgba(0, 0, 0, 0.2);;
         }
         @include laptop {
             display: none;
