@@ -28,6 +28,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            padding: rem(12px) rem(18px);
         }
 
         .header_logo {
@@ -47,7 +48,6 @@
         }
 
         .header_nav {
-            
             text-align: center;
             display: flex;
             flex-direction: row;
@@ -56,7 +56,7 @@
             column-gap: rem(40px);
             row-gap: rem(40px);
             margin-top: rem(20px);
-            padding: 20px 0;
+            padding: 20px;
 
             // active style
             transition: transform 0.3s ease-in-out;
@@ -95,18 +95,23 @@
                 }
     
                 &__list {
-                    display: block;
-                    padding: rem(12px);
-                    border-radius: rem(6px);
-                    font-size: rem(14px);
                     cursor: pointer;
                     @include laptop {
                         margin: 0px;
                     }
-                    &:hover {
-                        background-color: var(--subBg200);
+
+                    &__link {
+                        display: block;
+                        padding: rem(12px);
+                        border-radius: rem(6px);
+                        font-size: rem(14px);
+                        &:hover {
+                            background-color: var(--subBg200);
+                        }
+                        
                     }
                 }
+                
             }
             
         }
