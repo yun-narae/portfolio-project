@@ -47,6 +47,7 @@
         }
 
         .header_nav {
+            
             text-align: center;
             display: flex;
             flex-direction: row;
@@ -55,6 +56,7 @@
             column-gap: rem(40px);
             row-gap: rem(40px);
             margin-top: rem(20px);
+            padding: 20px 0;
 
             // active style
             transition: transform 0.3s ease-in-out;
@@ -67,6 +69,7 @@
             // nav js
             &.active {
                 transform: translateY(100%);
+                background-color: var(--subBg100);
             }
 
             @include laptop {

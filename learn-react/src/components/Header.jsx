@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const headerNav = [
     {
@@ -24,6 +24,11 @@ const headerNav = [
 ]
 
 const Header = () => {
+    const [ isActive, setIsActive ] = useState(false);
+
+    const toggleMenu = () => {
+        setIsActive(!isActive);
+    }
 
     return (
         <header id="header" role="banner">
@@ -31,14 +36,11 @@ const Header = () => {
                 <h1 className="header_logo">
                     <a href="/">portfolio<em>vite</em></a>
                 </h1>
-                <nav className="header_nav" role="navigation" aria-label="메인 메뉴">
-                    {/* <ul className="menu">
-                        <li className="menu__list"><a href="#intro">intro</a></li> 
-                        <li className="menu__list"><a href="#skill">skill</a></li>
-                        <li className="menu__list"><a href="#site">site</a></li>
-                        <li className="menu__list"><a href="#port">portfolio</a></li>
-                        <li className="menu__list"><a href="#contact">contact</a></li>
-                    </ul> */}
+                <nav 
+                    className={`header_nav ${isActive ? "active" : ""}`} 
+                    role="navigation" 
+                    aria-label="메인 메뉴"
+                >
                     <ul className="menu">
                         {headerNav.map((nav, key) => (
                             <li className="menu__list" key={key}>
@@ -54,8 +56,9 @@ const Header = () => {
                     aria-expanded="false" 
                     role="button" 
                     tabIndex="0"
+                    onClick={toggleMenu}
                 >
-                    <span>햄</span>
+                    <span>{isActive ? "햄" : "버거"}</span>
                 </div>
             </div>
         </header>
