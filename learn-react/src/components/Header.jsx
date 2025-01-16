@@ -1,12 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-
-const headerNav = [
-  { title: "intro", url: "#intro" },
-  { title: "skill", url: "#skill" },
-  { title: "site", url: "#site" },
-  { title: "portfolio", url: "#portfolio" },
-  { title: "contact", url: "#contact" },
-];
+import { headerNav } from "../constants";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false); // 햄버거 메뉴 열림/닫힘 상태
