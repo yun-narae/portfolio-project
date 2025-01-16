@@ -3,7 +3,7 @@ import Lenis from "@studio-freight/lenis";
 const smooth = () => {
     const smooth = new Lenis({
         duration: 1.5, // 좀 더 느리게, 스크롤 시간이 길어짐
-        easing: (t) => Math.min(1, 1.5 - Math.pow(2, -10 * t)), // 더 강렬한 easing 효과
+        easing: (t) => Math.min(1, 1.8 - Math.pow(2, -10 * t)), // 더 강렬한 easing 효과
         smoothWheel: true, // 마우스 휠의 스크롤을 부드럽게 처리
         smoothTouch: true, // 터치 스크롤도 부드럽게 처리
     });
