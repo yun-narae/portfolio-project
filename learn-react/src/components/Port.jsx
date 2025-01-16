@@ -106,7 +106,7 @@ const portText = [
 
 const Port = () => {
   return (
-      <section id="port">
+      <section id="portfolio">
           <div className="port__inner">
               <div className="port__title">
                   portfolio <em>포폴 작업물</em>
